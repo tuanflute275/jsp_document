@@ -99,3 +99,39 @@ File->new->maven project -> create simple project -> group_id: dduooiwweb.tenwwe
     b2: show into local terminal -> terminal
     b3: mvn clean insatll (build project và có file war)
     b4:debug as -> debug on serve -> chọn apache tomcat ->finish
+
+# dựng master layout
+https://mvnrepository.com/artifact/opensymphony/sitemesh/2.4.2
+
+-> sử dụng sitemesh để làm việc này
+
+tạo file decorators.xml trong WEB-INF
+
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+    <!-- Any urls that are excluded will never be decorated by Sitemesh -->
+    <excludes>
+        <pattern>/api*</pattern>
+    </excludes>
+    
+    <!-- apply Sitemesh default template -->
+    <decorator name="admin" page="admin.jsp">
+        <pattern>/admin*</pattern>
+    </decorator>
+    
+    <decorator name="web" page="web.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+    
+    <decorator name="login" page="login.jsp">
+        <pattern>/dang-nhap</pattern>
+    </decorator>
+</decorators>
+
+-> đoạn code này giúp mình làm master layout
+
+-> đoạn code trong  <excludes> nó sẽ không apply giao diện
+
+-> /api*  ==> * nghĩa là bất kì thứ gì cũng dc
+
+# ctrl + shift + u => để xóa các thứ còn thừa
