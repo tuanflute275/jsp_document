@@ -1,8 +1,11 @@
 # document jsp_servlet
 
 download eclipse  -> https://www.eclipse.org/downloads/
+
 download jdk      -> https://www.oracle.com/java/technologies/downloads/
+
 download maven    -> https://maven.apache.org/download.cgi
+
 download tomcat   -> https://tomcat.apache.org/download-90.cgi
 
 *** hướng dẫn cài đặt ***
